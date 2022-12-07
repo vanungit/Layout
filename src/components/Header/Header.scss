@@ -34,18 +34,6 @@ $darkGreyColor:#616161;
 
 
 
-._icon-search {
-    background: url("../../assets/img/Search.svg") no-repeat;
-    height    : 23px;
-    width     : 25px;
-}
-
-._icon-arrow-down {
-    background: url("../../assets/img/Arrow-down.svg") no-repeat;
-    height    : 20px;
-    width     : 27px;
-}
-
 
 
 .header {
@@ -54,6 +42,10 @@ $darkGreyColor:#616161;
     top       : 0;
     left      : 0;
     min-height: 40px;
+
+    ._container {
+        padding: 0 35px;
+    }
 
     &._scroll {
         background: red;
@@ -105,35 +97,24 @@ $darkGreyColor:#616161;
     }
 
     &__main {
-        flex   : 0 0 494/1270*100%;
-        display: flex;
+        flex           : 0 0 100%;
+        display        : flex;
+        justify-content: flex-end;
     }
 
-    &__search {
-        flex: 1 1 auto;
-    }
 
-    &__actions {}
 
-    &__logo {
-        color      : #000000;
-        font-weight: 700;
-        font-size  : 24px;
-        line-height: 29/24 *100%;
-        position   : relative;
-        z-index    : 50;
 
-    }
+
+
 }
-
-.header-menu {}
 
 .menu {
 
-    flex: 0 1 420px;
+    flex: 0 1 237px;
 
     @media (max-width:$md2+px) {
-        flex: 0 0 420px;
+        flex: 0 0 320px;
     }
 
     &__body {
@@ -347,13 +328,6 @@ $darkGreyColor:#616161;
 
 }
 
-._icon-card {
-    background   : url("../../assets/img/Ellipse.png") no-repeat center;
-    border-radius: 50%;
-    height       : 25px;
-    width        : 25px;
-
-}
 
 
 
