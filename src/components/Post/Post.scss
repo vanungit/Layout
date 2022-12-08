@@ -1,0 +1,104 @@
+.wrapper {
+    min-height: 100%;
+    overflow  : hidden;
+}
+
+
+
+$minWidth         :320px;
+$maxWidth         :1440;
+$maxWidthContainer:855;
+
+$md1:$maxWidthContainer+12;
+$md2:991.98;
+$md3:767.98;
+$md4:478.98;
+
+
+
+@mixin adaptive-style($style, $value, $mobValue) {
+
+    @media (min-width:$maxWidthContainer+px) {
+        #{$style}: $value+px;
+    }
+
+    @media (max-width:$maxWidthContainer+px) {
+        #{$style}: $mobValue+px;
+    }
+
+}
+
+
+
+.post {
+    background: #EDF7FA;
+    padding   : 10px 0 32px 0;
+
+
+    &__items {
+        @media (min-width:$maxWidthContainer+px) {
+            :first-child {
+                margin-right: 20px;
+            }
+
+            display        : flex;
+            justify-content: space-between;
+        }
+    }
+
+
+
+    .item-post {
+
+        &__subtitle {
+            font-weight: 400;
+            @include adaptive-style("font-size", 22, 18);
+            line-height: 60/22*100%;
+            color      : #21243D;
+        }
+
+        &__body {
+            padding      : 27px 47px 21px 23px;
+            background   : #FFFFFF;
+            box-shadow   : 0px 4px 10px rgba(187, 225, 250, 0.25);
+            border-radius: 4px;
+
+            :not(:last-child) {
+                margin: 0 0 20px 0;
+            }
+        }
+
+        &__title {
+            font-weight: 700;
+            @include adaptive-style("font-size", 26, 22);
+            line-height: 38/26*100%;
+            color      : #21243D;
+        }
+
+        &__date {
+            font-weight: 400;
+            @include adaptive-style("font-size", 18, 16);
+            line-height: 26/18*100%;
+            color      : #21243D;
+        }
+
+
+    }
+
+    .post-date {
+        display        : flex;
+        justify-content: space-between;
+        height         : 20px;
+        width          : 80%;
+
+        &__one {}
+
+        &__separator {
+            border: 0.6px solid black;
+            width : 1px;
+            height: 100%;
+        }
+
+        &__tu {}
+    }
+}

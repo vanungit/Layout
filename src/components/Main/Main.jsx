@@ -3,8 +3,6 @@ import './Main.scss'
 
 function Main() {
 
-
-
     return (
         <>
             <section className="page__main main">
