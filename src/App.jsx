@@ -5,6 +5,8 @@ import Header from './components/Header/Header.jsx';
 import Main from './components/Main/Main.jsx';
 import Post from './components/Post/Post.jsx';
 import Works from './components/Works/Works.jsx';
+import Footer from './components/Footer/Footer.jsx';
+
 
 
 
@@ -53,6 +55,7 @@ function App() {
             <Main />
             <Post />
             <Works />
+            <Footer />
 
         </>
     );

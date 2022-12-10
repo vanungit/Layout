@@ -3,6 +3,17 @@ import './Works.scss'
 
 function Works() {
 
+    class Arm {
+        constructor(option) {
+            this.name = option
+        }
+        static getA = () => {
+            console.log(this.name)
+        }
+    }
+    const obj = new Arm({ name: "asas" })
+    Arm.getA()
+
     return (
         <>
             <section className="page__work work">
