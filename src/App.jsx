@@ -15,6 +15,12 @@ import Footer from './components/Footer/Footer.jsx';
 
 function App() {
 
+
+
+
+
+
+
     window.onload = function () {
 
         document.addEventListener("click", documentActions)
